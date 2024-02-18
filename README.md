@@ -112,9 +112,9 @@ private String get<YOUR_TYPE>Value(String configName, <YOUR_TYPE> defaultValue)
 
 ## Deploy and Test
 
-Prerequisite: having sfdx cli installed
+Prerequisite: having Salesforce CLI installed; i.e. `sf` (v2)
 
-The script `scripts/build-on-scratch-org.sh` can be used to push the metadata to a new scratch org to test the functionality; unit tests are also run as part of the script. A single required parameter needs to be included, which should be the alias for a Dev Hub already authenticatd on your sfdx cli.
+The script `scripts/build-on-scratch-org.sh` can be used to push the metadata to a new scratch org to test the functionality; unit tests are also run as part of the script. A single required parameter needs to be included, which should be the alias for a Dev Hub already authenticatd on your Salesforce CLI.
 
 ```bash
 sh scripts/build-on-scratch-org.sh <YOUR_DEV_HUB_ORG_ALIAS>
