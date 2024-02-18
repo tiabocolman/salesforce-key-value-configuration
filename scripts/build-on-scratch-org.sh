@@ -10,10 +10,22 @@ if [ -z "$1" ]
 fi
 # Set
 echo "Creating scratch org..."
-sfdx force:org:create -v $DEV_HUB_ORG_ALIAS -a $SCRATCH_ORG_ALIAS -d 1 -f config/project-scratch-def.json
+sf org create scratch \
+  --target-dev-hub $DEV_HUB_ORG_ALIAS \
+  --alias $SCRATCH_ORG_ALIAS \
+  --duration-days 1 \
+  --definition-file config/project-scratch-def.json
 # 
 echo "Deploying metadata..."
-sfdx force:source:push -u $SCRATCH_ORG_ALIAS
+sf project deploy start \
+  --target-org $SCRATCH_ORG_ALIAS \
+  --source-dir sfdx-source \
+  --source-dir example
 #
 echo "Running tests..."
-sfdx force:apex:test:run -u $SCRATCH_ORG_ALIAS -r human -n OrgConfigurationTest -y -c
+sf apex run test \
+  --target-org $SCRATCH_ORG_ALIAS \
+  --result-format human \
+  --class-names OrgConfigurationTest \
+  --synchronous \
+  --code-coverage

@@ -1,4 +1,5 @@
 # SFDX Related
 .sfdx/
+.sf/
 # Exclude the default folder
 /sfdx-source/main/default
