@@ -31,7 +31,7 @@ private class OrgConfigurationTest {
         Test.startTest();
             String value = config.getStringValue(OrgConfigurationSelectorStub.KEY_STRING, STRING_DEFAULT);
         Test.stopTest();
-        System.assertEquals(OrgConfigurationSelectorStub.STRING_VALUE, value, 'String value retrieved incorrectly');
+        Assert.areEqual(OrgConfigurationSelectorStub.STRING_VALUE, value, 'String value retrieved incorrectly');
     }
     
     @isTest static void testGetStringDefaultValue() {
@@ -40,7 +40,7 @@ private class OrgConfigurationTest {
         Test.startTest();
             String value = config.getStringValue(OrgConfigurationSelectorStub.KEY_STRING, STRING_DEFAULT);
         Test.stopTest();
-        System.assertEquals(STRING_DEFAULT, value, 'Default String value retrieved incorrectly');
+        Assert.areEqual(STRING_DEFAULT, value, 'Default String value retrieved incorrectly');
     }
     
     @isTest static void testGetIntegerValue() {
@@ -50,7 +50,7 @@ private class OrgConfigurationTest {
         Test.startTest();
             Integer value = config.getIntegerValue(OrgConfigurationSelectorStub.KEY_INTEGER, INTEGER_DEFAULT);
         Test.stopTest();
-        System.assertEquals(OrgConfigurationSelectorStub.INTEGER_VALUE, value, 'Integer value retrieved incorrectly');
+        Assert.areEqual(OrgConfigurationSelectorStub.INTEGER_VALUE, value, 'Integer value retrieved incorrectly');
     }
     
     @isTest static void testGetIntegerDefaultValue() {
@@ -59,7 +59,7 @@ private class OrgConfigurationTest {
         Test.startTest();
             Integer value = config.getIntegerValue(OrgConfigurationSelectorStub.KEY_INTEGER, INTEGER_DEFAULT);
         Test.stopTest();
-        System.assertEquals(INTEGER_DEFAULT, value, 'Default Integer value retrieved incorrectly');
+        Assert.areEqual(INTEGER_DEFAULT, value, 'Default Integer value retrieved incorrectly');
     }
     
     @isTest static void testGetDecimalValue() {
@@ -69,7 +69,7 @@ private class OrgConfigurationTest {
         Test.startTest();
             Double value = config.getDecimalValue(OrgConfigurationSelectorStub.KEY_DECIMAL, DECIMAL_DEFAULT);
         Test.stopTest();
-        System.assertEquals(OrgConfigurationSelectorStub.DECIMAL_VALUE, value, 'Decimal value retrieved incorrectly');
+        Assert.areEqual(OrgConfigurationSelectorStub.DECIMAL_VALUE, value, 'Decimal value retrieved incorrectly');
     }
     
     @isTest static void testGetDecimalDefaultValue() {
@@ -78,7 +78,7 @@ private class OrgConfigurationTest {
         Test.startTest();
             Double value = config.getDecimalValue(OrgConfigurationSelectorStub.KEY_DECIMAL, DECIMAL_DEFAULT);
         Test.stopTest();
-        System.assertEquals(DECIMAL_DEFAULT, value, 'Default Decimal value retrieved incorrectly');
+        Assert.areEqual(DECIMAL_DEFAULT, value, 'Default Decimal value retrieved incorrectly');
     }
     
     @isTest static void testGetDoubleValue() {
@@ -88,7 +88,7 @@ private class OrgConfigurationTest {
         Test.startTest();
             Double value = config.getDoubleValue(OrgConfigurationSelectorStub.KEY_DOUBLE, DOUBLE_DEFAULT);
         Test.stopTest();
-        System.assertEquals(OrgConfigurationSelectorStub.DOUBLE_VALUE, value, 'Double value retrieved incorrectly');
+        Assert.areEqual(OrgConfigurationSelectorStub.DOUBLE_VALUE, value, 'Double value retrieved incorrectly');
     }
     
     @isTest static void testGetDoubleDefaultValue() {
@@ -97,7 +97,7 @@ private class OrgConfigurationTest {
         Test.startTest();
             Double value = config.getDoubleValue(OrgConfigurationSelectorStub.KEY_DOUBLE, DOUBLE_DEFAULT);
         Test.stopTest();
-        System.assertEquals(DOUBLE_DEFAULT, value, 'Default Double value retrieved incorrectly');
+        Assert.areEqual(DOUBLE_DEFAULT, value, 'Default Double value retrieved incorrectly');
     }
     
     @isTest static void testGetDateValue() {
@@ -107,7 +107,7 @@ private class OrgConfigurationTest {
         Test.startTest();
             Date value = config.getDateValue(OrgConfigurationSelectorStub.KEY_DATE, String.valueOf(DATE_DEFAULT));
         Test.stopTest();
-        System.assertEquals(OrgConfigurationSelectorStub.DATE_VALUE, value, 'Date value retrieved incorrectly');
+        Assert.areEqual(OrgConfigurationSelectorStub.DATE_VALUE, value, 'Date value retrieved incorrectly');
     }
     
     @isTest static void testGetDateDefaultValue() {
@@ -116,7 +116,7 @@ private class OrgConfigurationTest {
         Test.startTest();
             Date value = config.getDateValue(OrgConfigurationSelectorStub.KEY_DATE, String.valueOf(DATE_DEFAULT));
         Test.stopTest();
-        System.assertEquals(DATE_DEFAULT, value, 'Default date value retrieved incorrectly');
+        Assert.areEqual(DATE_DEFAULT, value, 'Default date value retrieved incorrectly');
     }
     
     @isTest static void testGetDatetimeValue() {
@@ -126,7 +126,7 @@ private class OrgConfigurationTest {
         Test.startTest();
             Datetime value = config.getDatetimeValue(OrgConfigurationSelectorStub.KEY_DATETIME, DATETIME_DEFAULT.formatGmt(DATE_TIME_FORMAT));
         Test.stopTest();
-        System.assertEquals(OrgConfigurationSelectorStub.DATETIME_VALUE, value, 'Datetime value retrieved incorrectly');
+        Assert.areEqual(OrgConfigurationSelectorStub.DATETIME_VALUE, value, 'Datetime value retrieved incorrectly');
     }
     
     @isTest static void testGetDatetimeDefaultValue() {
@@ -135,7 +135,7 @@ private class OrgConfigurationTest {
         Test.startTest();
             Datetime value = config.getDatetimeValue(OrgConfigurationSelectorStub.KEY_DATETIME, DATETIME_DEFAULT.formatGmt(DATE_TIME_FORMAT));
         Test.stopTest();
-        System.assertEquals(DATETIME_DEFAULT, value, 'Default Datetime value retrieved incorrectly');
+        Assert.areEqual(DATETIME_DEFAULT, value, 'Default Datetime value retrieved incorrectly');
     }
     
     @isTest static void testGetBooleanValue() {
@@ -145,7 +145,7 @@ private class OrgConfigurationTest {
         Test.startTest();
             Boolean value = config.getBooleanValue(OrgConfigurationSelectorStub.KEY_BOOLEAN, BOOLEAN_DEFAULT);
         Test.stopTest();
-        System.assertEquals(OrgConfigurationSelectorStub.BOOLEAN_VALUE, value, 'Boolean value retrieved incorrectly');
+        Assert.areEqual(OrgConfigurationSelectorStub.BOOLEAN_VALUE, value, 'Boolean value retrieved incorrectly');
     }
     
     @isTest static void testGetBooleanDefaultValue() {
@@ -154,7 +154,7 @@ private class OrgConfigurationTest {
         Test.startTest();
             Boolean value = config.getBooleanValue(OrgConfigurationSelectorStub.KEY_BOOLEAN, BOOLEAN_DEFAULT);
         Test.stopTest();
-        System.assertEquals(BOOLEAN_DEFAULT, value, 'Default Boolean value retrieved incorrectly');
+        Assert.areEqual(BOOLEAN_DEFAULT, value, 'Default Boolean value retrieved incorrectly');
     }
     
     @isTest static void testGetListValue() {
@@ -165,7 +165,7 @@ private class OrgConfigurationTest {
             List<String> value = config.getListStringValue(OrgConfigurationSelectorStub.KEY_LIST_STRING, LIST_DEFAULT);
         Test.stopTest();
         // Checking the list size seems good enough
-        System.assertEquals(OrgConfigurationSelectorStub.LIST_VALUE_SIZE, value.size(), 'List value retrieved incorrectly');
+        Assert.areEqual(OrgConfigurationSelectorStub.LIST_VALUE_SIZE, value.size(), 'List value retrieved incorrectly');
     }
     
     @isTest static void testGetListDefaultValue() {
@@ -175,7 +175,7 @@ private class OrgConfigurationTest {
             List<String> value = config.getListStringValue(OrgConfigurationSelectorStub.KEY_LIST_STRING, LIST_DEFAULT);
         Test.stopTest();
         // Checking the list size seems good enough
-        System.assertEquals(LIST_DEFAULT.size(), value.size(), 'Default list value retrieved incorrectly');
+        Assert.areEqual(LIST_DEFAULT.size(), value.size(), 'Default list value retrieved incorrectly');
     }
     
     @isTest static void testGetSetValue() {
@@ -186,7 +186,7 @@ private class OrgConfigurationTest {
             Set<String> value = config.getSetStringValue(OrgConfigurationSelectorStub.KEY_SET_STRING, SET_DEFAULT);
         Test.stopTest();
         // Checking the set size seems good enough
-        System.assertEquals(OrgConfigurationSelectorStub.SET_VALUE_SIZE, value.size(), 'Set value retrieved incorrectly');
+        Assert.areEqual(OrgConfigurationSelectorStub.SET_VALUE_SIZE, value.size(), 'Set value retrieved incorrectly');
     }
     
     @isTest static void testGetSetDefaultValue() {
@@ -196,7 +196,7 @@ private class OrgConfigurationTest {
             Set<String> value = config.getSetStringValue(OrgConfigurationSelectorStub.KEY_SET_STRING, SET_DEFAULT);
         Test.stopTest();
         // Checking the set size seems good enough
-        System.assertEquals(SET_DEFAULT.size(), value.size(), 'Default set value retrieved incorrectly');
+        Assert.areEqual(SET_DEFAULT.size(), value.size(), 'Default set value retrieved incorrectly');
     }
     
     @isTest static void testGetMapValue() {
@@ -207,20 +207,20 @@ private class OrgConfigurationTest {
             Map<String, String> value = config.getMapStringValue(OrgConfigurationSelectorStub.KEY_MAP_STRING, MAP_DEFAULT);
         Test.stopTest();
         // Checking the map size seems good enough
-        System.assertEquals(OrgConfigurationSelectorStub.MAP_VALUE_SIZE, value.size(), 'Map value retrieved incorrectly');
+        Assert.areEqual(OrgConfigurationSelectorStub.MAP_VALUE_SIZE, value.size(), 'Map value retrieved incorrectly');
     }
     
-    public static testMethod void testGetMapDefaultValue() {
+    @isTest static void testGetMapDefaultValue() {
         // Do not stub in order to get the default value (since no record should be there)
         OrgConfiguration config = new OrgConfiguration();
         Test.startTest();
             Map<String, String> value = config.getMapStringValue(OrgConfigurationSelectorStub.KEY_MAP_STRING, MAP_DEFAULT);
         Test.stopTest();
         // Checking the map size seems good enough
-        System.assertEquals(MAP_DEFAULT.size(), value.size(), 'Default map value retrieved incorrectly');
+        Assert.areEqual(MAP_DEFAULT.size(), value.size(), 'Default map value retrieved incorrectly');
     }
     
-    public static testMethod void testCacheMap() {
+    @isTest static void testCacheMap() {
         // To test the cache we'll have to stubs each returning a configuration record with same key and different value
         // The idea is that even though both instances are using different stubs they both should get the same result
         // As the value will be kept on the cached map
@@ -241,11 +241,11 @@ private class OrgConfigurationTest {
             String valueOne = configOne.getStringValue(GENERIC_KEY, STRING_DEFAULT);
             String valueTwo = configTwo.getStringValue(GENERIC_KEY, STRING_DEFAULT);
         Test.stopTest();
-        System.assertEquals(CONFIG_STRING_VALUE, valueOne, 'String value retrieved incorrectly for first instance');
-        System.assertEquals(CONFIG_STRING_VALUE, valueTwo, 'String value retrieved incorrectly for second instance');
+        Assert.areEqual(CONFIG_STRING_VALUE, valueOne, 'String value retrieved incorrectly for first instance');
+        Assert.areEqual(CONFIG_STRING_VALUE, valueTwo, 'String value retrieved incorrectly for second instance');
     }
 
-    public static testMethod void testExceptionOnDeserialize() {
+    @isTest static void testExceptionOnDeserialize() {
         // Force an exception when deserializing a map value
         Map<String, String> values = new Map<String, String>{GENERIC_KEY => WRONG_MAP};
         Map<String, String> types = new Map<String, String>{GENERIC_KEY => MAP_STRING};
@@ -257,6 +257,6 @@ private class OrgConfigurationTest {
             Map<String, String> value = config.getMapStringValue(GENERIC_KEY, MAP_DEFAULT);
         Test.stopTest();
         // The default value should be returned as a result of the incorrectly formattted value 
-        System.assertEquals(MAP_DEFAULT.size(), value.size(), 'Default value was not returned on a forced exception');
+        Assert.areEqual(MAP_DEFAULT.size(), value.size(), 'Default value was not returned on a forced exception');
     }
 }
